@@ -1,0 +1,66 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 120 40% 98%;
+    --foreground: 122 39% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 122 39% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 122 39% 15%;
+
+    --primary: 122 39% 35%;
+    --primary-foreground: 355 100% 100%;
+
+    --secondary: 35 91% 90%;
+    --secondary-foreground: 24 9% 15%;
+
+    --muted: 120 20% 92%;
+    --muted-foreground: 122 15% 40%;
+
+    --accent: 35 91% 90%;
+    --accent-foreground: 24 9% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 120 20% 88%;
+    --input: 120 20% 88%;
+    --ring: 122 39% 35%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 122 30% 20%;
+    --sidebar-foreground: 120 70% 90%;
+    --sidebar-primary: 120 70% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 122 25% 30%;
+    --sidebar-accent-foreground: 120 70% 90%;
+    --sidebar-border: 122 25% 30%;
+    --sidebar-ring: 120 70% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.terre-card {
+  @apply rounded-lg border bg-card shadow-sm;
+}
+
+.terre-container {
+  @apply container mx-auto px-4 py-8 md:px-6;
+}
